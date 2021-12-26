@@ -1,0 +1,129 @@
+header {
+    position: relative;
+    height: 100vh;
+
+    @include small {
+        background-color: #B40003;
+    }
+
+    .header__tree {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -3;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+
+        video {
+            position: relative;
+            top: 50%;
+            left: 50%;
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+            transform: translate(-50%, -50%);
+        }
+    }
+    .header__tree-text {
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+
+        @include small {
+            width: 100%;
+        }
+        .text__container{
+            width: 81%;
+            @include small {text-align: center;}
+            .text__title {
+                font-size: 60px;
+                margin-bottom: 20px;
+                color: green;
+                font-weight: 700;
+                animation: backInDown;
+                animation-duration: 2s; 
+                @include large {
+                    font-size: 40px;
+                }
+            }
+            .text__message {
+                font-size: 40px;
+                margin-bottom: 40px;
+                color: rgb(234,190,63);
+                animation: fadeInLeftBig;
+                animation-duration: 1s; 
+                @include large {
+                    font-size: 30px;
+                }
+            }
+            .text__firm {
+                font-size: 25px;
+                color: white;
+                animation: fadeOut;
+                animation-duration: 2s;
+                @include large {
+                    font-size: 25px;
+                }
+            }
+        }
+    }
+}
+
+
+
+/* header {
+    width: 100%;
+    height: 100vh;
+
+    .header__tree {
+        overflow: hidden;
+        height: 100vh;
+        .myVideo {
+            width: 100vw;
+            position: relative;
+            overflow: hidden;
+        }
+    }
+    .header__tree-text {
+        position: absolute;
+        top: 0;
+        display: flex;
+        flex-direction: column;
+        width: 67%;
+        height: 100vh;
+        align-items: center;
+        justify-content: center;
+        .text__container {
+            display: flex;
+            flex-direction: column;
+            width: 72%;
+            justify-content: center;
+            .text__title {
+                font-size: 50px;
+                color: green;
+                font-weight: 700;
+                margin-bottom: 40px;
+                animation: backInDown;
+                animation-duration: 2s; 
+            }
+            .text__message {
+                font-size: 40px;
+                margin-bottom: 115px;
+                color: rgb(234,190,63);
+                animation: fadeInLeftBig;
+                animation-duration: 1s; 
+            }
+            .text__firm {
+                font-size: 30px;
+                color: white;
+                animation: fadeOut;
+                animation-duration: 2s;
+            }
+        }
+
+    }
+} */
